@@ -31,9 +31,12 @@ The model is now available for public inference on Hugging Face.
 ## 📂 Project Structure
 ```
 📁 BERT-Summarizer/
-├── 📓 1_dataset_preprocessing.ipynb
-├── 📓 2_model_training.ipynb
-├── 📓 3_model_testing.ipynb
+│
+├── 📁 Notebooks/
+│ ├── 📓 1_dataset_preprocessing.ipynb
+│ ├── 📓 2_model_training.ipynb
+│ └── 📓 3_model_testing.ipynb
+│
 ├── README.md
 ├── requirements.txt
 └── .gitignore
