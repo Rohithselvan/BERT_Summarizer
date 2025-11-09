@@ -1,0 +1,9 @@
+torch>=2.0.0
+transformers>=4.35.0
+huggingface_hub>=0.23.0
+pandas>=2.0.0
+numpy>=1.25.0
+tqdm
+nltk
+scikit-learn
+datasets

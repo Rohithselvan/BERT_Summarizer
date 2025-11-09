@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
+.venv
+env/
+venv/
+.ipynb_checkpoints/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Jupyter / Kaggle
+*.ipynb_checkpoints
+*.log
+*.tmp
+*.csv
+*.json
+*.tsv
+
+# Model and data
+*.pt
+*.bin
+*.h5
+*.tar.gz
+*.zip
+*.pkl
+*.npy
+*.npz
+data/
+dataset/
+processed_dataset/
+raw_dataset/
+
+# Output folders
+runs/
+outputs/
+checkpoints/
+cache/
+working/
