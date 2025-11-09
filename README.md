@@ -76,61 +76,12 @@ The fine-tuned summarization model is hosted on **Hugging Face**:
 
 ## ⚙️ Requirements
 
-Create a `requirements.txt` with:
-
-torch>=2.0.0
-transformers>=4.35.0
-huggingface_hub>=0.23.0
-pandas>=2.0.0
-numpy>=1.25.0
-tqdm
-nltk
-scikit-learn
-datasets
-
-go
-Copy code
-
 Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-🚀 Quick Usage (Summarization Demo)
-python
-Copy code
-from transformers import BertTokenizer, EncoderDecoderModel
-import torch
+```
 
-# Load model and tokenizer
-model_name = "Rohith1872/bert-summarizer-gpu-final"
-tokenizer = BertTokenizer.from_pretrained(model_name)
-model = EncoderDecoderModel.from_pretrained(model_name)
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
-
-text = """
-Artificial Intelligence is transforming industries worldwide. From healthcare
-and education to finance and transportation, AI enhances efficiency and reduces
-costs. However, without proper regulation, it may cause job loss and privacy concerns.
-"""
-
-inputs = tokenizer(text, return_tensors="pt", truncation=True, padding="max_length", max_length=512)
-inputs = {k: v.to(device) for k, v in inputs.items()}
-
-with torch.no_grad():
-    summary_ids = model.generate(
-        inputs["input_ids"],
-        max_length=150,
-        num_beams=4,
-        no_repeat_ngram_size=2,
-        early_stopping=True,
-        top_p=0.95,
-        top_k=50
-    )
-
-summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-print("\n📝 Summary:", summary)
 🧩 Training Workflow
 Preprocessing:
 Load and clean the raw dataset (remove stopwords, normalize text, prepare input-output pairs).
@@ -188,19 +139,3 @@ Copy code
   year   = {2025},
   howpublished = {\url{https://huggingface.co/Rohith1872/bert-summarizer-gpu-final}}
 }
-✅ Clone the repository, open the notebooks on Kaggle, or use the Hugging Face model directly for instant summarization.
-
-yaml
-Copy code
-
----
-
-### 🔧 Quick Tips for Upload
-1. Save this file as **`README.md`** in your main project folder.  
-2. Add `.gitignore` and `requirements.txt` (from earlier).  
-3. Run:
-   ```bash
-   git add .
-   git commit -m "Added final README and structure"
-   git push origin main
-Your GitHub repo will now look clean, structured, and professional.
