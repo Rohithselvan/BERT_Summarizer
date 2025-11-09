@@ -82,7 +82,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-🧩 Training Workflow
+## 🧩 Training Workflow
 Preprocessing:
 Load and clean the raw dataset (remove stopwords, normalize text, prepare input-output pairs).
 
@@ -95,7 +95,7 @@ Evaluate the model and generate human-readable summaries.
 Deployment:
 Upload final model and tokenizer to Hugging Face using push_to_hub().
 
-📈 Results
+## 📈 Results
 Metric	Description	Score
 ROUGE-1	Overlap of unigrams	High (Good coherence)
 ROUGE-L	Longest common subsequence	Stable performance
@@ -103,7 +103,7 @@ Inference Speed	~1.2 s per paragraph (on GPU)
 
 (Exact metrics depend on dataset split and training parameters.)
 
-🧠 Key Features
+## 🧠 Key Features
 Custom fine-tuned BERT2BERT model for abstractive summarization
 
 Preprocessed dataset for reproducible training
@@ -112,7 +112,7 @@ GPU-optimized for fast experimentation
 
 Public Hugging Face model for open use
 
-🧰 Environment
+## 🧰 Environment
 Platform: Kaggle
 
 Runtime: GPU (Tesla T4)
@@ -121,18 +121,14 @@ Language: Python 3.11
 
 Framework: PyTorch, Hugging Face Transformers
 
-👤 Author
+## 👤 Author
 Rohith Selvan
 📧 rohithselvan10@gmail.com
 🌐 Hugging Face Profile
 
-🏁 License
-This project is released under the MIT License.
+## 🏁 License
 Feel free to use, modify, and share with attribution.
 
-📜 Citation
-latex
-Copy code
 @misc{rohith1872_bert_summarizer_2025,
   author = {Rohith Selvan},
   title  = {BERT Summarizer (GPU Fine-Tuned)},
