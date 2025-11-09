@@ -130,16 +130,3 @@ Rohith Selvan
 
 ## 🏁 License
 Feel free to use, modify, and share with attribution.
-
-## 📜 Citation
-@misc{rohith1872_bert_summarizer_2025,
-
-  author = {Rohith Selvan},
-  
-  title  = {BERT Summarizer (GPU Fine-Tuned)},
-  
-  year   = {2025},
-  
-  howpublished = {\url{https://huggingface.co/Rohith1872/bert-summarizer-gpu-final}}
-  
-}
